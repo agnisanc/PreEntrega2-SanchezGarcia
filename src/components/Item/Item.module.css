@@ -1,14 +1,10 @@
-.header{
+.productCard{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
     font-family: "Playfair Display", serif;
-}
-
-.title{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    text-decoration: none;
+    margin-top: 2rem;
 }
 
 .link {
@@ -18,11 +14,4 @@
 
 .link:hover {
     color: grey; /* Cambia el color de texto al pasar el mouse sobre los enlaces */
-}
-
-.navbar{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    text-align: center;
 }

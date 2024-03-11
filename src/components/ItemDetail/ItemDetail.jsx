@@ -1,22 +1,19 @@
 import ItemCount from "../ItemCount/ItemCount"
+import classes from "./ItemDetail.module.css"
 
 
 const ItemDetail = ({ name, category, stock, price, image, type}) => {
     return (
-        <article>
-            <div>
+        <article className={classes.itemDetail}>
+            <div className={classes.image}>
             <img src={image} style={{width: 400}}/>
             </div>
-            <div>
-            <div>
+            <div className={classes.details}>
             <h3>{name}</h3>
             <h3>Material: {category}</h3>
             <h3>Tipo: {type}</h3>
             <h3>${price}</h3>
-            </div>
-            <div>
             <ItemCount stock={stock}/>
-            </div>
             </div>
         </article>
     )

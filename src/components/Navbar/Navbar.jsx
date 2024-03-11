@@ -9,12 +9,12 @@ const Navbar = () => {
         <>
         <header className={classes.header}>
         <div className={classes.title}>
-        <Link to='/'>JOYAS AUREOM</Link>
+        <h1><Link to='/' className={classes.link}>JOYAS AUREOM</Link></h1>
         <CartWidget />
         </div>
         <nav className = {classes.navbar}>
-            <Link to='/category/Oro'>Oro</Link>
-            <Link to='/category/Plata'>Plata</Link>
+            <h2><Link to='/category/Oro' className={classes.link}>Oro</Link></h2>
+            <h2><Link to='/category/Plata' className={classes.link}>Plata</Link></h2>
         </nav>
         </header>
         </>

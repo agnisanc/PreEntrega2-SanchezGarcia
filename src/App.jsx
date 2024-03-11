@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<ItemListContainer greeting={'Bienvenidos a AUREOM'}/>}/>
-          <Route path='/category/:categoryId' element={<ItemListContainer greeting={'Productos de '}/>}/>
+          <Route path='/category/:categoryId' element={<ItemListContainer />}/>
           <Route path='/item/:itemId' element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
