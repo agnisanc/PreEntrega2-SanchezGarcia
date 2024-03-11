@@ -1,11 +1,21 @@
 import Navbar from "./components/Navbar/Navbar"
-import ItemList from "./components/ItemListContainer/ItemListContainer.jsx"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx"
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+
 function App() {
 
   return (
     <>
-      <Navbar/>
-      <ItemList greeting={'Bienvenido a AUREOM'}/>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting={'Bienvenidos a AUREOM'}/>}/>
+          <Route path='/category/:categoryId' element={<ItemListContainer greeting={'Productos de '}/>}/>
+          <Route path='/item/:itemId' element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

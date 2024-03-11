@@ -1,19 +1,20 @@
 import CartWidget from "../CartWidget/Cart.jsx"
-import ItemList from "../ItemListContainer/ItemListContainer.jsx"
+import { Link } from "react-router-dom"
 import classes from "./Navbar.module.css"
+
+
 
 const Navbar = () => {
     return (
         <>
         <header className={classes.header}>
         <div className={classes.title}>
-        <h2>JOYAS AUREOM</h2>
+        <Link to='/'>JOYAS AUREOM</Link>
         <CartWidget />
         </div>
         <nav className = {classes.navbar}>
-            <a>Oro</a>
-            <a>Plata</a>
-            <a>Outlet</a>
+            <Link to='/category/Oro'>Oro</Link>
+            <Link to='/category/Plata'>Plata</Link>
         </nav>
         </header>
         </>
